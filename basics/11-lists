@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -r -la $(pwd) $(dirname $(pwd)) /boot
+ls -r -u -la $(pwd) $(dirname $(pwd)) /boot
