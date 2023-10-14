@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
-#A script to stop a previous process
-
-pgrep -f 4-to_infinity_and_beyond | xargs kill
+#displaying
+prog_pid=()
+readarray -t prog_pid < <(pgrep -la -x "bash.*" | grep '4-to_infinity_and_beyond' | cut -d ' ' -f 1)
+for ((i = 0; i < "${#prog_pid[0]}"; i++)) do
+          kill -s SIGTERM "${prog_pid[i]}"
+done
