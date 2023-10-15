@@ -4,5 +4,5 @@ process_id=$(pgrep 4-to_infinity_and_beyond)
 
 # If the process ID is not empty, stop the process
 if [[ -n "$process_id" ]]; then
-  pkill  "$process_id"
+  kill  "$process_id"
 fi
