@@ -1,0 +1,1 @@
+Hello, this is Input Output redirections in bash
